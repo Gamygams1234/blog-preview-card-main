@@ -1,0 +1,115 @@
+:root {
+  --yellow--: hsl(47, 88%, 63%);
+  --white--: hsl(0, 0%, 100%);
+  --grey--: hsl(0, 0%, 50%);
+  --black--: hsl(0, 0%, 7%);
+}
+
+body {
+  font-size: 16px;
+  font-family: "Figtree", sans-serif;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+main {
+  width: calc(100% - 3rem);
+  min-height: calc(100dvh - 3rem);
+  background-color: var(--yellow--);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  transition: box-shadow .1s ease-in-out;
+
+  .card {
+    padding: 1.5rem;
+    border: 1px var(--black--) solid;
+    background-color: white;
+    width: 100%;
+    max-width: 546px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 0px 1px var(--black--);
+    -webkit-box-shadow: 2px 2px 0px 1px var(--black--);
+    -moz-box-shadow: 2px 2px 0px 1px  var(--black--);
+    .top {
+      margin-bottom: 1rem;
+      & img {
+        width: 100%;
+        border-radius: 0.75rem;
+      }
+    }
+    .bottom {
+      .keys {
+        display: flex;
+        margin-bottom: 1rem;
+        .key {
+          background-color: var(--yellow--);
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+        }
+      }
+    }
+    .date{
+        color: var(--black--);
+        margin-bottom: 1rem;
+    }
+    .title{
+        font-size: 1.5rem; 
+        margin-bottom: 1rem;
+        cursor: pointer;
+        transition: .1s all ease-in-out;
+    }
+    .title:hover{
+        color: var(--yellow--);
+
+    }
+    .description{
+        color: var(--grey--);
+        line-height: 1.5;
+        margin-bottom: 1rem;
+
+    }
+
+    .profile{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        & img{
+            height: 3rem;
+
+        }
+        & h2{
+            margin-left: 1rem;
+        }
+    }
+  
+  }
+}
+
+
+main{
+    .card.active{
+        
+        box-shadow: 16px 16px 0px -1px var(--black--);
+        -webkit-box-shadow: 16px 16px 0px -1px var(--black--);
+        -moz-box-shadow: 16px 16px 0px -1px var(--black--);
+
+    
+            .title{
+                color:var(--yellow--)
+            }
+    
+        
+    }
+}
+
+
